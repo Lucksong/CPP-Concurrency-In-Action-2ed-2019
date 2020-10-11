@@ -24,7 +24,7 @@ class oop{
 class thread_guard{
 public:
     thread& t;
-    thread_guard(thread& t_):t(t_){}
+    explicit thread_guard(thread& t_):t(t_){}
     ~thread_guard(){
         if(t.joinable()){
             FILE* fp = fopen("xigou.txt", "a");
